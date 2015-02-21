@@ -11,6 +11,23 @@
     </div>
   <% end %>
 
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+  <div>
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+  </div>
+  <div>
+    <%= f.label :author %>
+    <%= f.select("author", "author_id", Author.all.collect {|p| [ p.first_name, p.id ] }, { include_blank: true }) %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
