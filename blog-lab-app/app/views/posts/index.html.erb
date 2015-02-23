@@ -5,7 +5,5 @@
 <h1>Listing Posts</h1>
 
 <% @posts.each do |post| %>
-<h2><%= link_to post.title, post %></h2>
-<h3>By <%= post.author.full_name %>, categorized as: <%= post.category %></h3>
-<h4>Written <%= time_ago_in_words post.created_at %> ago</h4>
+<h2><%= link_to post.title, post %> by <%= link_to post.author.full_name, post.author %> - <%= time_ago_in_words post.created_at %> ago, categorized as: <%= post.category %></h2>
 <% end %>
