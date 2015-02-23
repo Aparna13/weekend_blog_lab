@@ -21,3 +21,15 @@ ul li {
   font-size: 1.5em;
   display: inline;
 }
+
+// Example using 'Cerulean' bootswatch
+//
+// First import cerulean variables
+@import "bootswatch/journal/variables";
+
+// Then bootstrap itself
+@import "bootstrap";
+
+// And finally bootswatch style itself
+@import "bootswatch/journal/bootswatch";
+
